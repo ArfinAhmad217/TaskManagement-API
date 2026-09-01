@@ -104,7 +104,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:5173") // Vite ka default port
+        policy.WithOrigins("http://localhost:5173","https://task-management-frontend-liard-phi.vercel.app/") // Vite ka default port
               .AllowAnyHeader()
               .AllowAnyMethod();
     });

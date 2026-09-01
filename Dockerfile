@@ -11,6 +11,8 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
+ENV DOTNET_USE_POLLING_FILE_WATCHER=1
+
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "TaskManagement.API.dll"]
